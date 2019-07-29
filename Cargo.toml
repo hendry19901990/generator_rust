@@ -1,0 +1,17 @@
+[package]
+name = "generator_rust"
+version = "0.1.0"
+authors = ["Hendry Rodriguez <hendry.rodriguez@capitalblockchain.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bitcoin   = "0.17.1"
+secp256k1 = "0.12"
+num-bigint = "0.2"
+mysql = "*"
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+reqwest = "0.9.18"
