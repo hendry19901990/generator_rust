@@ -29,13 +29,16 @@ pub fn private_from_big(num: &BigUint, compressed: bool) -> Option<PrivateKey>{
 }
 
 pub fn str_to_big(str : String) -> BigUint{
-   BigUint::parse_bytes(&(*str.into_bytes()), 10).unwrap()
+   BigUint::parse_bytes(&(*str.into_bytes()), 16).unwrap()
 }
 
 pub fn fill_vec(data : &[u8]) -> [u8; 32] {
 	let mut result = [0u8; 32];
 	let mut i = 0;
 	for n in data {
+		if i == 32 {
+			break
+		}
 		result[i] = *n;
 		i = i + 1;
 	}
