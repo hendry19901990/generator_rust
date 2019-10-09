@@ -28,8 +28,8 @@ pub fn private_from_big(num: &BigUint, compressed: bool) -> Option<PrivateKey>{
 	}
 }
 
-pub fn str_to_big(str : String) -> BigUint{
-   BigUint::parse_bytes(&(*str.into_bytes()), 16).unwrap()
+pub fn str_to_big(str : String, radix: u32) -> BigUint{
+   BigUint::parse_bytes(&(*str.into_bytes()), radix).unwrap()
 }
 
 pub fn fill_vec(data : &[u8]) -> [u8; 32] {
