@@ -17,3 +17,4 @@ serde_derive = "1.0"
 reqwest = "0.9.18"
 sha2 = "0.8.0"
 hex = "0.3.2"
+openssl = { version = "0.10", features = ["vendored"] }

@@ -1,5 +1,5 @@
 #![allow(unused)]
-#![feature(proc_macro_hygiene, decl_macro)]
+
 
 extern crate bitcoin;
 extern crate secp256k1;
@@ -53,7 +53,7 @@ fn read_file() {
 	use std::io::BufReader; 
 	use std::io::BufRead;
 
-	let pool = mysql::Pool::new("mysql://test:test@/wallet").unwrap();
+	let pool = mysql::Pool::new("mysql://root:password@localhost:3307/wallet").unwrap();
 
 	let file = File::open("C:/Users/HENDRY/Documents/numeros_primos/periodic_table.txt").unwrap();
 	let mut reader = BufReader::new(file);
@@ -148,7 +148,7 @@ fn read_by_range(i: usize){
             ("111251222992715560308921142549645508283961922051594736365803047501698173564850".to_owned(), "121251222992715560308921142459327597741377044090517404665361208164465555928565".to_owned())
 	    ];
 	
-    let pool = mysql::Pool::new("mysql://test:test@/wallet").unwrap();
+    let pool = mysql::Pool::new("mysql://root:password@localhost:3306/wallet").unwrap();
 
     let tup      = &list[i];
     let _str     = &tup.0;
